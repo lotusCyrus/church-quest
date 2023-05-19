@@ -9,13 +9,13 @@ import '@firebase/firestore-compat'
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB2VuUk4VHX5KekR_2BgYYeaNiCs2BF3sM",
-  authDomain: "flight-speed-d21f3.firebaseapp.com",
-  projectId: "flight-speed-d21f3",
-  storageBucket: "flight-speed-d21f3.appspot.com",
-  messagingSenderId: "920307192082",
-  appId: "1:920307192082:web:a71b4e7a87f9b45c3da3cb",
-  measurementId: "G-E9NGXC91VS"
+  apiKey: "AIzaSyACmBmipt6VIE_Xl_-alEW9Jg8ijldNcOE",
+  authDomain: "church-quest.firebaseapp.com",
+  projectId: "church-quest",
+  storageBucket: "church-quest.appspot.com",
+  messagingSenderId: "755043825690",
+  appId: "1:755043825690:web:d385acf142c14ecc8af9a3",
+  measurementId: "G-L2XZD84WHF"
 };
 
 // Initialize Firebase  
@@ -48,3 +48,7 @@ export function useAuth(){
 
 	return currentUser;
 }
+
+
+
+
