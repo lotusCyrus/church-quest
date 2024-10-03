@@ -1,4 +1,37 @@
 .App {
+<<<<<<< HEAD
+  margin:0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+}
+
+.theme{
+  background-color: rgb(138, 43, 226);
+  border: 1px solid blueviolet;
+  color:aliceblue;
+}
+
+.delete{
+  color:#cf2f2f
+}
+.delete-bg{
+  background-color: #cf2f2f;
+  color: white;
+  border: 1px solid #cf2f2f;
+}
+
+.right-section{
+  width: 83%;
+  position: relative;
+}
+
+.right-section.open{
+  left:17%;
+}
+.right-section.close{
+  left:7.1%;
+}
+=======
   text-align: center;
 }
 
@@ -36,3 +69,4 @@
     transform: rotate(360deg);
   }
 }
+>>>>>>> 211b44896ca6ba81767824139ce8a51861872b7b
