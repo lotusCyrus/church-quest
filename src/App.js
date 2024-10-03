@@ -1,24 +1,39 @@
+
 import logo from './logo.svg';
 import './App.css';
+import './responsive.css';
+import {  Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home/Home';
+import Members from './Pages/Members/Members';
+import Settings from './Pages/Settings/Settings';
+import TopBar from './components/nav/topBar/topBar';
+import SideNav from './components/nav/sideNav/sideNav';
+import './Pages/Home/Home.css'
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const [isOpen,setIsOpen]=useState(true)
+
+ const toggleSideNav=()=>{
+   setIsOpen(!isOpen)
+   console.log(isOpen)
+ }
+
+  return ( 
+      <div className='App'>
+             <SideNav isOpen={isOpen}/>     
+      
+       <div className={`right-section ${isOpen ? 'open' : 'close'}`}>
+        <TopBar isOpen={isOpen} toggleSideNav={toggleSideNav}/>
+       <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Members" element={<Members />} />
+            <Route path="/Settings" element={<Settings />} />
+         </Routes>
+       </div>
+          
     </div>
+   
   );
 }
 
