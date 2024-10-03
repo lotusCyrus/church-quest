@@ -1,28 +1,15 @@
 {
-<<<<<<< HEAD
-  "name": "dashboard",
+  "name": "theconnect",  // Use the appropriate name here
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2",
-=======
-  "name": "theconnect",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "firebase": "^9.22.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.0",
->>>>>>> 211b44896ca6ba81767824139ce8a51861872b7b
+    "firebase": "^9.22.0",  // Keeping Firebase from the other branch
+    "react": "^18.3.1",    // You can use either 18.2.0 or 18.3.1 based on your project
+    "react-dom": "^18.3.1",  // Same for react-dom
+    "react-router-dom": "^6.26.2",  // Or keep "^6.8.0" depending on what your project needs
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
