@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './topBar.css'
 import profileImage from './profileImage.png'
 export default function TopBar({toggleSideNav, isOpen}) { 

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import './responsive.css';
 import {  Route, Routes } from 'react-router-dom';
