@@ -1,22 +1,26 @@
 
-@media (min-width: 1951px){
+@media (min-width: 1301px) {
   .data-cards, .member-cards{
-    margin-left:10%;
-    justify-content: flex-start;
-  
+   justify-content: center;
+
   }
+  
+
 }
-@media (min-width: 1100px) and (max-width: 1950px) 
+
+
+@media (min-width: 1101px) and (max-width: 1300px) 
 {  .data-cards, .member-cards{
-    margin-left:10%;
+    margin-left:18%;
     justify-content: flex-start;
-  
+
   }
 }
-@media (min-width: 900px) and (max-width: 1200px) 
+@media (min-width: 900px) and (max-width: 1100px) 
 {
    .data-cards,.member-cards{
     justify-content: center;
+    
    }
 }
 @media (min-width: 768px) and (max-width: 1250px) 
@@ -322,6 +326,6 @@ width: 90%;
     .side-nav.collapsed{
      width: 22% !important;
     }
-    
+ 
     
   }

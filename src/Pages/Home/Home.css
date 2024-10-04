@@ -6,6 +6,9 @@
     justify-content: center;
  
 }
+
+
+
 .data-cards, .member-cards{
     display: flex;
     padding: 2rem 0rem 0 0;

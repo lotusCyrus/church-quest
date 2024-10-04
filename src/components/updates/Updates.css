@@ -11,7 +11,6 @@
       display: flex;
       position: relative;
       flex-direction: column;
-      width: calc(20%-20px);
   
   }
   .notification p{
@@ -74,7 +73,6 @@
       position: relative;
       display: flex;;
       flex-direction: column;
-      width: calc(20%-20px); 
   
   }
   

@@ -10,7 +10,7 @@ import './Pages/Home/Home.css'
 import { useState } from 'react';
 
 function App() {
-const [isOpen,setIsOpen]=useState(true)
+const [isOpen,setIsOpen]=useState()
 
  const toggleSideNav=()=>{
    setIsOpen(!isOpen)
@@ -24,8 +24,8 @@ const [isOpen,setIsOpen]=useState(true)
        <div className={`right-section ${isOpen ? 'open' : 'close'}`}>
         <TopBar isOpen={isOpen} toggleSideNav={toggleSideNav}/>
        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Members" element={<Members />} />
+            <Route path="/" isOpen={isOpen} element={<Home />} />
+            <Route path="/Members" isOpen={isOpen} element={<Members />} />
             <Route path="/Settings" element={<Settings />} />
          </Routes>
        </div>

@@ -2,9 +2,11 @@ import React from 'react'
 import './Home.css'
 import Updates from '../../components/updates/Updates'
 import DisciplingImage from './discipler.png'
-export default function Home(){
+export default function Home( {isOpen}){
+  
+
   return (
-    <div className='dashboard-box'>
+    <div className={`dashboard-box ${isOpen ? 'open' : 'close'}`}>
 
             <div className="data-cards"> 
       
