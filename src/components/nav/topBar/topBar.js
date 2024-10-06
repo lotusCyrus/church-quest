@@ -1,14 +1,13 @@
 import React from 'react'
 import './topBar.css'
 import profileImage from './profileImage.png'
+import { Link } from 'react-router-dom'
 export default function TopBar({toggleSideNav, isOpen}) { 
-
-
   
   return (
     <div className={`top-bar ${isOpen?'open':'close'}`}>
           
-            <div className="hamburger" onClick={toggleSideNav} >
+            <div className={`hamburger ${isOpen?'open':'close'}`} onClick={toggleSideNav}>
                <div className="bar"></div>
                <div className="bar"></div>
                <div className="bar"></div>
@@ -21,6 +20,7 @@ export default function TopBar({toggleSideNav, isOpen}) {
 
           </div>
           
+          <Link to='/Settings' className='top-bar-link'>
           <div className="user">
              <img src={profileImage} className="user-img" alt="" />
              <div className="user-info">
@@ -29,6 +29,7 @@ export default function TopBar({toggleSideNav, isOpen}) {
                 <span className="user-title"> Super Admin</span>
              </div>
           </div> 
+          </Link>
     </div>
   )
 }
