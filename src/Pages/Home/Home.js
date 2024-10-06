@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Home.css'
 import Updates from '../../components/updates/Updates'
 import DisciplingImage from './discipler.png'
-import Modal from '../../components/modal/Modal'
 export default function Home( { modalToggle, isOpen}){
  
    
