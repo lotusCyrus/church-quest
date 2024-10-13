@@ -1,14 +1,14 @@
-
 .side-nav{
+    bottom: 0;
     width:17%;
     height: 100%;
+
     background: blueviolet;
     border: 1px solid white;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     position: fixed;
     z-index: 1000 !important;
 }
-
 
 .side-nav-links{
     cursor:pointer;
