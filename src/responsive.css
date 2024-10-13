@@ -133,9 +133,20 @@
   }
 
   .modal-content{
+   
     margin-left: 32%;
     margin-right:10%;
     min-width: 150px;
+     height: 58% !important;
+  }
+
+  .modal-content div{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
   }
   .group-info{
     justify-content: center;
