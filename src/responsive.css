@@ -1,5 +1,11 @@
 
 @media (min-width: 1301px) {
+   
+  .modal-content{
+    margin-left: 25%;
+    margin-right: 15%;
+   }
+
   .data-cards, .member-cards{
    justify-content: center;
 
@@ -10,7 +16,12 @@
 
 
 @media (min-width: 1101px) and (max-width: 1300px) 
-{  .data-cards, .member-cards{
+{  
+  .modal-content{
+    margin-left: 25%;
+    margin-right: 15%;
+   }
+  .data-cards, .member-cards{
     margin-left:18%;
     justify-content: flex-start;
 
@@ -25,6 +36,11 @@
 }
 @media (min-width: 768px) and (max-width: 1250px) 
 {
+   .modal-content{
+    margin-left: 25%;
+    margin-right: 15%;
+   }
+
   .profile-input-container {
       display: flex;
       gap: 15px;
@@ -111,6 +127,13 @@
 }
 @media (min-width:230px) and (max-width:768px)
 {
+
+
+  .modal-content{
+    margin-left: 32%;
+    margin-right:10%;
+    min-width: 150px
+  }
   .group-info{
     justify-content: center;
     align-items: center;
@@ -291,8 +314,7 @@ width: 90%;
        }
    
       .updates .card, .member-card, .activities, .notifications{
-        z-index: -1000   ;
-        
+        z-index: -1000   ;        
       }
 
       /*settings*/

@@ -10,9 +10,7 @@
 }
 .modal-content{
     margin-top:250px;
-    margin-left: 35%;
-    margin-right: 25%;
-
+   
     margin-bottom: 250px;
     padding: 20px 30px 0px 25px;
    width: 50%;
@@ -29,7 +27,6 @@
  .modal-input{
     height: 38px;
     width: 100%;
-    min-width: 30px;
     margin: 0px 0 20px 0;
     border:1px solid  #ccc;
     border-radius: 5px;
