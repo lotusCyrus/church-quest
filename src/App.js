@@ -9,12 +9,29 @@ import SideNav from './components/nav/sideNav/sideNav';
 import Modal from './components/modal/Modal';
 import './Pages/Home/Home.css'
 import { useState } from 'react';
+import ModalForm from './components/modal/ModalForm';
 
 function App() {
 const [isOpen,setIsOpen]=useState()
 const [isModalOpen, setIsModalOpen]=useState(false)
 const [status,setStatus]=useState(null)
-  const modalToggle=(value)=>{
+
+const [memberList, setMemberList ]=useState([
+  {id:'1', name:'Kunle  Adewaleyy orishalwere', number:'091343493433', email:'Johnson@gmail.com' , address:'No 1 , adekunle street, Ibadan', status:'Convert' } ,
+  {id:'2', name:'Kunley  Adewaleuuu orishalwere', number:'091344343433', email:'Johnsons@gmail.com', address:'No 2 , adekunle street, Ibadan', status:'Discipling' },
+  {id:'3', name:'Kunler  Adewalel orishalwere', number:'091343043433', email:'Johnsonsolotu@gmail.com', address:'No 3, adekunle street, Ibadan', status:'Established' }
+])
+
+
+
+
+const addMember=(member)=>{
+  setMemberList((prevMember)=>{
+    return[...prevMember, member]
+  })
+}
+
+const modalToggle=(value)=>{
     setIsModalOpen(!isModalOpen)
     setStatus(value)
  }
@@ -22,97 +39,18 @@ const [status,setStatus]=useState(null)
   const onClose=()=>{
   setIsModalOpen(!isModalOpen)
   console.log("closed")
-
  }
- 
+
   const toggleSideNav=()=>{
    setIsOpen(!isOpen)
    console.log(isOpen)
  }
 
-  return ( 
+   return ( 
       <div className='App'>
           {isModalOpen && (
-                <Modal onClose={onClose}>
-                 {status === "convert" && (
-                         <div>
-                            <h3>Convert Form</h3>
-                         <div>
-                       <input type='text' className='modal-input'placeholder='Convert Name' />
-                       
-                       </div>
-                       <div>
-                       <input type='text' className='modal-input'placeholder='Phone number' />
-           
-                       </div>
-                       <div>
-                       <input type='text' className='modal-input'placeholder='Email address' />
-           
-                      </div>
-       
-                      <div> <input type='text' className='modal-input' placeholder='Residential adress' />  </div>
-                       <div>
-                       <input type='submit' className='submit-btn' value='submit'/>
-           
-                     </div>
-                       
-                         </div>
-                 )}
-                 {status === "discipling" && (
-                         <div>
-                                      <h3>Disciples Form</h3>
-
-                         <div>
-                       <input type='text' className='modal-input'placeholder='Disciple name' />
-                       
-                       </div>
-                       <div>
-                       <input type='number' className='modal-input'placeholder='Phone number' />
-           
-                       </div>
-
-                       <div>
-                       <input type='text' className='modal-input'placeholder='Your email address' />
-           
-                      </div>
-       
-                      <div> <input type='text' className='modal-input' placeholder='Your residential adress' />  </div>
-                       <div>
-                       <input type='submit' className='submit-btn' value='submit'/>
-           
-                     </div>
-                       
-                         </div>
-                 )}
-                 {status === "established" && (
-                         <div>
-                                                <h3>Established Members Form</h3>
-         
-                         <div>
-                       <input type='text' className='modal-input'placeholder='Established member name' />
-                       
-                       </div>
-                       <div>
-                       <input type='text' className='modal-input'placeholder='Your phone number' />
-           
-                       </div>
-                       <div>
-                       <input type='text' className='modal-input'placeholder='Your email address' />
-           
-                      </div>
-       
-                      <div> <input type='text' className='modal-input' placeholder='Your residential adress' />  </div>
-                       <div>
-                       <input type='submit' className='submit-btn' value='submit'/>
-           
-                     </div>
-                       
-                         </div>
-                 )}
-                 
-                 
-            
-                
+                <Modal  onClose={onClose}>
+                           <ModalForm addMember={addMember} status={status}/>
               </Modal>
    )}     
       
@@ -122,13 +60,14 @@ const [status,setStatus]=useState(null)
            <TopBar isOpen={isOpen} toggleSideNav={toggleSideNav}/>
         <Routes>
             <Route path="/"  element={<Home isOpen={isOpen} modalToggle={modalToggle} />} />
-            <Route path="/Members" isOpen={isOpen} element={<Members />} />
-            <Route path="/Settings" element={<Settings />} />
+            <Route path="/Members" isOpen={isOpen}  element={<Members memberList={memberList} addMember={addMember}  />} />
+            <Route path="/Settings"  element={<Settings />} />
          </Routes>
        </div>
       </div>
    
   );
 }  
+
 
 export default App;

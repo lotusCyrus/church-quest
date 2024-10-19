@@ -1,72 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Members.css'
-import Updates from '../../components/updates/Updates'
-export default function Members() {
+import Updates from '../../components/updates/Updates' 
+export default function Members({memberList}) {
+ 
+
+  const totalMembers=memberList.length
+  
+  const removeMember=()=>{
+        
+  }
   return (
+
+
     <div className='members-box'>
-          <div class="member-cards">
+          <div className="member-cards">
                
-
-
-               <div class="member-card">
+               {memberList.map((member) =>(
+                 <div className="member-card" key={member.id}>
                   
-                  <div class="member-option">
-                     <i class="fa-solid fa-ellipsis"></i>    
-                 </div>
+                        <div className="member-option" onClick={()=>removeMember(member.id)}>
+                           <i className="fa-solid fa-ellipsis"></i>    
+                        </div>
                   
-                 <div class="member-detials"> 
+                 <div className="member-detials"> 
                     
-                     <div class="member-info"> <i class="fa fa-user"></i><span class="member-name">Kunle  Adewale orishalwere</span></div>
-                     <div class="member-info"><i class="fa fa-phone"></i><span class="member-phone">09134343433</span> </div>
-                     <div class="member-info"><i class="fa fa-envelope"></i><span class="member-email">Johnsonsolotu@gmail.com</span> </div>
+                     <div className="member-info"> <i className="fa fa-user"></i><span className="member-name">{member.name}</span></div>
+                     <div className="member-info"><i className="fa fa-phone"></i><span className="member-phone">{member.number}</span> </div>
+                     <div className="member-info"><i className="fa fa-envelope"></i><span className="member-email">{member.email}</span> </div>
+                     <div className="member-info"><i className="fa fa-map"></i><span className="member-address">{member.address}</span> </div> 
 
-                     <div class="member-info"><i class="fa fa-map"></i><span class="member-address">No 2 , adekunle street, Ibadan</span> </div> 
 
-
-                   </div> 
+                 </div> 
 
                   </div>
+                  )
+                )
+               }
 
 
-                  <div class="member-card">
-                     <div class="member-option">
-                        <i class="fa-solid fa-ellipsis"></i>    
-                    </div>
-                     <div class="member-detials"> 
-                      
-                       <div class="member-info"> <i class="fa fa-user"></i><span class="member-name">Kunle  Adewale orishalwere</span></div>
-                       <div class="member-info"><i class="fa fa-phone"></i><span class="member-phone">09134343433</span> </div>
-                       <div class="member-info"><i class="fa fa-envelope"></i><span class="member-email">Johnsonsolotu@gmail.com</span> </div>
-                       <div class="member-info"><i class="fa fa-map"></i><span class="member-address">No 2 , adekunle street, Ibadan</span> </div>
-  
-                     </div> 
-  
-                    </div>
              
-                    <div class="member-card">
-                     <div class="member-option">
-                        <i class="fa-solid fa-ellipsis"></i>    
-                    </div>
-                     <div class="member-detials"> 
-                      
-                       <div class="member-info"> <i class="fa fa-user"></i><span class="member-name">Kunle  Adewale orishalwere</span></div>
-                       <div class="member-info"><i class="fa fa-phone"></i><span class="member-phone">09134343433</span> </div>
-                       <div class="member-info"><i class="fa fa-envelope"></i><span class="member-email">Johnsonsolotu@gmail.com</span> </div>
 
-                       <div class="member-info"><i class="fa fa-map"></i><span class="member-address">No 2 , adekunle street, Ibadan</span> </div>
-  
-                     </div> 
-  
-                    </div>
 
-                    <div class="member-card theme">
-                     <div class="member-card-details ">
-                         <div class="member-total">
-                           <h1 class="member-card-number">224</h1>
+            
+
+                    <div className="member-card theme">
+                     <div className="member-card-details ">
+                         <div className="member-total">
+                           <h1 className="member-card-number">{totalMembers}</h1>
                            <span>Total</span><br/>
                          </div>
-
-                         <span class="card-icon"><i class="fa-solid fa-people-group"></i></span>
+                         <span className="card-icon"  ><i className="fa-solid fa-people-group"></i></span>
 
                        </div>
 
