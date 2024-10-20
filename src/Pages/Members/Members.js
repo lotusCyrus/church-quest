@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Members.css'
 import Updates from '../../components/updates/Updates' 
 export default function Members({memberList}) {

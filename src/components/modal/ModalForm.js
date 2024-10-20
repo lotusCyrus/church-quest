@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 export default function ModalForm({status, addMember}) {
-
+    
     const [formData, setFormData]=useState({
       name: '',
       number: '',
@@ -15,7 +15,6 @@ export default function ModalForm({status, addMember}) {
     
     const handleSubmit=(e)=>{
       e.preventDefault()
-    
       const member ={
         ...formData,
         id: `member_${Date.now()}`
@@ -23,17 +22,17 @@ export default function ModalForm({status, addMember}) {
       addMember(member)
       resetForm()
     }
+
       const handleChange=(e)=>{
         const {name, value}=e.target
-         setFormData((prevData)=>(
+          setFormData((prevData)=>(
             {
                  ...prevData, 
                  [name]:value
             }))
-      }
-      
-    
+          }
 
+      
   return (
     <div>
            {status === "convert" && (
