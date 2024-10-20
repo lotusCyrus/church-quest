@@ -17,7 +17,8 @@ export default function ModalForm({status, addMember}) {
       e.preventDefault()
       const member ={
         ...formData,
-        id: `member_${Date.now()}`
+        id: `member_${Date.now()}`,
+        status:status
       }
       addMember(member)
       resetForm()
@@ -71,20 +72,20 @@ export default function ModalForm({status, addMember}) {
                                       <h3>Disciples Form</h3>
 
                          <div>
-                       <input type='text' className='modal-input'placeholder='Disciple name'  />
+                       <input type='text' className='modal-input'placeholder='Disciple name' onChange={handleChange}  />
                        
                        </div>
                        <div>
-                       <input type='number' className='modal-input'placeholder='Phone number' />
+                       <input type='number' className='modal-input'placeholder='Phone number' onChange={handleChange}  />
            
                        </div>
 
                        <div>
-                       <input type='text' className='modal-input'placeholder='Your email address' />
+                       <input type='text' className='modal-input'placeholder='Your email address' onChange={handleChange}  />
            
                       </div>
        
-                      <div> <input type='text' className='modal-input' placeholder='Your residential adress' />  </div>
+                      <div> <input type='text' className='modal-input' placeholder='Your residential adress' onChange={handleChange}  />  </div>
                        <div>
                        <input type='submit' className='submit-btn' value='submit'/>
            
@@ -97,19 +98,19 @@ export default function ModalForm({status, addMember}) {
                                                 <h3>Established Members Form</h3>
          
                          <div>
-                       <input type='text'  className='modal-input' placeholder='Established member name' />
+                       <input type='text'  className='modal-input' placeholder='Established member name' onChange={handleChange}  />
                        
                        </div>
                        <div>
-                       <input type='text' className='modal-input' placeholder='Your phone number' />
+                       <input type='text' className='modal-input' placeholder='Your phone number' onChange={handleChange}  />
            
                        </div>
                        <div>
-                       <input type='text' className='modal-input'placeholder='Your email address' />
+                       <input type='text' className='modal-input'placeholder='Your email address' onChange={handleChange}  />
            
                       </div>
        
-                      <div> <input type='text' className='modal-input' placeholder='Your residential adress' />  </div>
+                      <div> <input type='text' className='modal-input' placeholder='Your residential adress' onChange={handleChange}  />  </div>
                        <div>
                        <input type='submit' className='submit-btn' value='submit'/>
            

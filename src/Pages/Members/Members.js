@@ -1,13 +1,13 @@
 import React from 'react'
 import './Members.css'
 import Updates from '../../components/updates/Updates' 
-export default function Members({memberList}) {
+export default function Members({memberList, setMemberList}) {
  
 
   const totalMembers=memberList.length
   
-  const removeMember=()=>{
-        
+  const removeMember=(id)=>{
+          setMemberList((memberList).filter((member) =>member.id !== id ) );
   }
   return (
 
@@ -28,6 +28,7 @@ export default function Members({memberList}) {
                      <div className="member-info"><i className="fa fa-phone"></i><span className="member-phone">{member.number}</span> </div>
                      <div className="member-info"><i className="fa fa-envelope"></i><span className="member-email">{member.email}</span> </div>
                      <div className="member-info"><i className="fa fa-map"></i><span className="member-address">{member.address}</span> </div> 
+                     <div className="member-info"><i className="fa-regular fa-circle-dot"></i><span className="member-status"> <b>{member.status}</b>  </span> </div> 
 
 
                  </div> 

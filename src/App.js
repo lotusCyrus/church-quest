@@ -17,9 +17,7 @@ const [isModalOpen, setIsModalOpen]=useState(false)
 const [status,setStatus]=useState(null)
 
 const [memberList, setMemberList ]=useState([
-  {id:'1', name:'Kunle  Adewaleyy orishalwere', number:'091343493433', email:'Johnson@gmail.com' , address:'No 1 , adekunle street, Ibadan', status:'Convert' } ,
-  {id:'2', name:'Kunley  Adewaleuuu orishalwere', number:'091344343433', email:'Johnsons@gmail.com', address:'No 2 , adekunle street, Ibadan', status:'Discipling' },
-  {id:'3', name:'Kunler  Adewalel orishalwere', number:'091343043433', email:'Johnsonsolotu@gmail.com', address:'No 3, adekunle street, Ibadan', status:'Established' }
+  
 ])
 
 
@@ -60,7 +58,7 @@ const modalToggle=(value)=>{
            <TopBar isOpen={isOpen} toggleSideNav={toggleSideNav}/>
         <Routes>
             <Route path="/"  element={<Home isOpen={isOpen} modalToggle={modalToggle} />} />
-            <Route path="/Members" isOpen={isOpen}  element={<Members memberList={memberList} addMember={addMember}  />} />
+            <Route path="/Members" isOpen={isOpen} element={<Members setMemberList={setMemberList} memberList={memberList} addMember={addMember}  />} />
             <Route path="/Settings"  element={<Settings />} />
          </Routes>
        </div>
