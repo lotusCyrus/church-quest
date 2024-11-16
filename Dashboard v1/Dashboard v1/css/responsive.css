@@ -1,0 +1,220 @@
+@media (min-width: 768px) and (max-width: 1250px) 
+{
+  .profile-input-container {
+      display: flex;
+      gap: 15px;
+      flex-direction: column;
+   }
+   .delete-account{
+   flex-direction: column;
+   gap: 15px;
+  }
+
+}
+@media (min-width: 768px) and (max-width: 1079px) {
+  /* Styles for medium devices */
+  .side-nav-links a {
+    font-size: 18px;
+  }
+.data-cards, .member-cards{
+  margin-right: 3%;
+}
+  .updates{
+    flex-direction: column;
+  }
+  .notifications{
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for medium devices */
+  .side-nav ul{    
+    padding:10px ;
+}
+  .updates{
+    margin: auto;
+    justify-content: center;
+  }  
+  .notifications{
+    width: 100%;
+  }
+    
+}
+
+@media (min-width: 768px) and (max-width: 902px) {
+  /* Styles for medium devices */
+  .data-cards, .member-cards{  
+    margin: auto;
+    justify-content: center; 
+  }
+.card, .member-card{
+  width: 400px;
+  height: 200px;
+  justify-content: space-between;
+}
+
+.user-info{
+  margin:7px;
+  font-size: 14px;
+  color: gray;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.updates{
+  flex-direction: column;
+}
+.notifications{
+  width: 100%;
+}
+
+
+
+}
+@media (min-width:230px) and (max-width:768px)
+{
+  .group-info{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  } 
+
+   .side-nav nav{
+    margin-top: 90px;  
+   }
+
+.side-nav-links a{
+  flex-direction: column;
+
+} 
+.side-nav-links a i {
+  overflow: visible;
+}
+
+.side-nav-links a i::after{
+  z-index: 2000;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: white;
+  color:blueviolet;
+  font-size: 12px;
+  margin-top: -70px;
+  margin-left: -25%;
+  padding: 12px;
+  width:70px;
+  border-radius: 10px;
+  display: none;
+  position:absolute;
+} 
+.side-nav-links a i:hover::after{
+   display: block;
+   cursor:grab
+}
+.side-nav-links a .fa-table-columns::after{
+  content:'Dashboard'
+}
+
+.side-nav-links a .fa-user-plus::after{
+  content:'Collect'
+}
+
+.side-nav-links a .fa-people-group::after{
+  content:'Members'
+}
+.side-nav-links a .fa-gears::after{
+  content:'Settings'
+}
+.fa-door-open{
+  content: 'Log out';
+}
+  .top-bar{
+    justify-content: space-around;
+  }
+  
+  .hamburger{
+    display: none;
+  }
+
+  .user-info, .group-name, .nav-link{
+  display: none;
+   }
+
+  .search-box{
+    width: 50%;
+  }
+  .fa-search{
+    width: 20%;
+  }
+  .search-input{
+    width: 70%;
+  }
+   .user{
+    padding-right: 8%;
+  }
+  .dashboard-box, .members-box{
+      padding:100px 0px 0px 0px;
+}
+
+
+  .data-cards, .member-cards { 
+    justify-content: center;
+    
+      }
+ 
+      .card, .member-card{
+            width: 330px;
+            justify-content: space-between;
+      }
+.updates{
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+}
+.notifications{
+  width: 100%;
+  }
+
+  /*settings page*/
+  .profile-input-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+ }
+ .delete-account{
+ flex-direction: column;
+ gap: 15px;
+}
+.settings-nav{
+  width:20%; 
+}
+.settings-board{
+left:20%;
+width: 80%;
+
+}
+
+.settings-nav ul{
+  justify-content: center;
+  
+}
+.settings-nav-text, .profile-upload-text{
+  display: none;
+}
+}
+@media (min-width:0px) and (max-width:230px)
+  {
+    .hamburger{
+      display: none;
+    }
+  
+.search-input {
+      width: 50%;
+    }
+    .user-info, .group-name, .nav-link , .settings-nav-text, .profile-upload-text{
+      display: none;
+       }
+    
+   
+  .data-cards, .member-cards{
+   margin-left: -80%
+  }
+  }

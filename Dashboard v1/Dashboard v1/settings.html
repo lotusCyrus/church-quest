@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/members.css">
+     <link rel="stylesheet" href="css/settings.css">
+   <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Church Quest</title>
+
+   </head>
+   
+    <body>
+    <div >  
+      
+  
+      <div class="side-nav" > 
+         <div class="group-info">
+            <img src="img/church-logo.png" class="group-img" alt="">
+        
+              <h5 class="group-name">Church Quest</h5>
+          
+         </div>
+         <nav> 
+                 <div>
+            
+               <p  class="side-nav-links"><a  href="index.html"><i class="fa-solid fa-table-columns"></i><span class="nav-link">Dashboard</span></a></li>
+               <p  class="side-nav-links"><a  href="#"><i class="fa-solid fa-user-plus"></i><span class="nav-link">Collect </span></a></li>
+            <p class="side-nav-links"><a  href="members.html"> <i class="fa-solid fa-people-group"></i><span class="nav-link">Members</span></a></li>
+            <p  class="side-nav-links"><a  href="settings.html"><i class="fa-solid fa-gears"></i><span class="nav-link">Settings</span></a></li>
+            <p  class="side-nav-links"><a  href="#"><i class="fa-solid fa-door-open"></i><span class="nav-link">Log out</span></a></li>
+         </ul>
+         </nav>
+        
+        </div>
+
+       <div class="right-section">
+             
+         <div class="top-bar"> 
+            <!--Hamburger-->
+            <div class="hamburger" onclick="openNav()">
+               <div class="bar"></div>
+               <div class="bar"></div>
+               <div class="bar"></div>
+ 
+            </div>
+
+          <!--Searchbox-->
+          <div class="search-box">
+            <i class="fa fa-search"></i>
+            <input type="text"  placeholder="search member" class="search-input ">
+
+          </div>
+          <!--User-->
+          <div class="user">
+             <img src="img/profileImage.png" class="user-img" alt="" />
+             <div class="user-info">
+            
+                <span class="user-name">Johnson</span> <br/>
+                <span class="user-title">Super Admin</span>
+             </div>
+          </div> 
+
+         </div>  
+
+               
+             <div class="settings-box">
+                
+               <!--Settings navigation--> 
+
+               <div class="settings-nav">
+                     <ul>
+                        <li>  <h2 class="settings-nav-text">Settings</h2> <i class="fa-solid fa-gears"></i></li>
+
+                        <li> <i class="fa-solid fa-user"></i> <span class="settings-nav-text">Your Profile</span> </li>
+                        <li> <i class="fa-solid fa-toggle-on"></i> <span class="settings-nav-text">Light/Dark Mode</span> </li>
+                        <li> <i class="fa-solid fa-star-half-stroke"></i> <span class="settings-nav-text">Product Feedback</span> </li>
+               
+                     </ul>
+                  </div>
+                  
+                  
+                <!--Settings board-->
+
+                  <div class="settings-board">
+                     <div class="profile-name"> <span><b>Johnson</b> </span>  <span class="profile-change delete">(Change)</span></div>  
+                     <div class="profile-pic">    <img src="img/profileImage.png" class="user-img" alt="" />  <span class="profile-upload-text"> Upload New Picture</span> <span class="delete">Remove</span></div>
+                 
+                       
+                        <form action="#" class="profile-form">
+                              <span>Email address</span> 
+                              
+                             <div class="profile-input-container">
+                              <input class="profile-email profile-input" placeholder="your-domain@gmail.com" type="email" >
+                              <button class="theme profile-button">Update</button> <br/>
+                             </div> 
+                        </form>
+                            
+                          <form action="#" class="profile-form">
+
+                              <span>Password</span>
+                  
+                              <div class="profile-input-container">
+                                 <input class="profile-pass profile-input"  placeholder="**********" type="password" ><button class="theme profile-button">Update</button>
+                              </div>
+                              
+                               
+                        </form>
+                        
+                          <!--Delete account-->
+
+                          <div class="delete-account">
+                             <span><span class="delete">Delete account</span><br/></br>
+                           By deleting this account, you will loose all your contacts and their data.
+                          </span>
+                           <button class="profile-button delete-bg">Delete</button>
+                          </div>
+
+                      
+                             
+                        </form>                
+                 </div>
+
+
+             </div>
+             
+
+  
+             
+         </div>
+        
+        </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

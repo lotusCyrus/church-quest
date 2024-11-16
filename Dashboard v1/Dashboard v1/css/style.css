@@ -1,0 +1,386 @@
+body{
+    margin:0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+}
+.theme{
+    background-color: rgb(138, 43, 226);
+    border: 1px solid blueviolet;
+    color:aliceblue;
+}
+
+.delete{
+    color:#cf2f2f
+}
+.delete-bg{
+    background-color: #cf2f2f;
+    color: white;
+    border: 1px solid #cf2f2f;
+
+}
+
+.side-nav{
+    width:17%;
+    height: 100%;
+    background: blueviolet;
+    border: 1px solid white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: fixed;
+}
+
+
+.side-nav-links{
+    cursor:pointer;
+    padding:20px 0 20px 0;
+
+  }
+.side-nav-links a{
+    color: white;
+    text-decoration: none;
+}
+.group-info{
+    height:70px;
+    display: flex;
+    color: aliceblue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.group-img{
+    width: 37px;
+    height:37px;
+ 
+}
+.group-name{
+   margin-left: 15px;
+}
+.side-nav nav{    
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+nav ul li a{
+ display: flex;
+ align-items: center;
+}
+
+.side-nav-links{
+       
+       color: white;
+        list-style-type: none;
+        margin-bottom:1rem;
+       
+}
+
+.side-nav-links a{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+
+}
+
+.side-nav-links i{
+    padding:0px 0.5rem 0px 0.5rem;
+
+}
+
+.right-section{
+  width: 83%;
+  position: relative;
+  left: 17%;
+}
+
+.top-bar{
+    width: 82%;
+    left: 17%;
+  height: 60px;
+  padding: 10px ;
+  box-shadow:0 0 4px rgba(0, 0, 0, 0.3);
+  background-color: aliceblue;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+
+.hamburger {
+    width: 25px;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.bar{
+    width: 100%;
+    height: 3px;
+    margin:3px 0px 3px 0px;
+    background-color: rgb(33, 31, 31);
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+
+}
+
+ .open-nav:hover .bar:nth-child(1){
+ transform: translateX(5px) translateY(6px) rotate(-90deg);
+
+}
+
+.open-nav:hover .bar:nth-child(2){
+    transform:translateX(-2px) translateY(-4px) rotate(-90deg);
+
+   }
+   .open-nav:hover .bar:nth-child(3){
+    transform:translateX(-9px) translateY(-13px) rotate(-90deg);
+     
+   }
+.search-box{
+    width:max-content;
+    border:0.05px solid gainsboro;
+    background-color: white;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+   
+}
+.search-box:hover{
+    border:2px solid rgba(138, 43, 226,0.2);  
+
+}
+.search-input , .profile-input{
+    width: 300px;
+    height: 38px;
+    border:none;
+    text-align: center;
+    position: relative;
+}
+.search-input:focus{
+    outline: none;
+}
+
+.user{
+    display: flex;
+    
+}
+.user-info{
+   margin:7px 30px 7px 7px;
+   font-size: 14px;
+   color: gray;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.user-img{
+    width: 50px;
+    height:50px;
+}
+.dashboard-box, .members-box{
+    position: relative;
+    padding:100px 0px 0px 90px;
+
+}
+.data-cards, .member-cards{
+    display: flex;
+    padding: 2rem 0rem 0 0;
+    flex-wrap: wrap;
+    margin-left:4% ;
+
+} 
+
+.card, .member-card{
+    padding: 15px;
+    margin:1rem 1rem 0 1rem;
+    height: 190px;
+    width: 240px;
+    border:2px solid whitesmoke;
+    box-shadow: 2px 2px 2px 2px rgba(250, 249, 255, 0.9);
+    transition: transform 0.5s;
+
+}
+.card{
+    display: flex;
+
+}
+.card-details{
+    display: flex;
+    width: 75px;
+    flex-direction: column;
+    text-align: left;
+    font-size: 16px;
+
+
+}
+.card-icon{
+    padding:1.5rem;   
+    cursor: pointer;
+}
+.card-icon i{
+   font-size: 2rem;
+}
+
+.card-details span{
+
+}
+.card-button , .profile-button {
+  width: 80px;
+  height:40px ;  
+  text-align: left;
+  border-radius:4px;
+  padding: 8px;
+  cursor: pointer;
+}
+.card-button i{
+    padding:0 8px 0 ;
+}
+.card:hover{
+    box-shadow: 6px 6px 6px 6px rgba(138, 43, 226, 0.3);
+   
+}
+
+.dashboard-icon {
+    font-size: 2rem;
+    color: white; /* Blue color */
+}
+.updates {
+  margin:auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  justify-content: space-between;
+
+}
+
+.notifications{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: calc(20%-20px);
+
+}
+.notification p{
+    font-size:small;
+   
+}
+.notification-card{
+    display: flex;
+    align-items: center;
+    padding:0.5rem;
+    margin: 10px 0 0 5px;
+    width: 95%;
+     display: flex;
+    justify-content: space-between;
+     border:2px solid whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(250, 249, 255, 0.9);
+   }
+   .notification-info{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+   }
+   .notification-icon{
+    padding: 0.5rem;
+    border-radius: 100%;
+    width:4%;
+
+   }
+   .notification-option .fa-ellipsis{
+    cursor: pointer;
+
+   }
+   .notification img{
+    width: 15px;
+    height: 15px;
+   }
+   .todo-bg{
+    background-color:aquamarine;
+
+   }
+   .meeting-bg{
+    background-color:rgb(185, 124, 162)
+
+   }
+   .notification-info, .notification-time , .activity-card{
+     font-size: 0.6rem;
+   }
+   .notification-highlight{
+    color: gray;
+    
+   }
+   
+   
+.activities{
+    position: relative;
+    display: flex;;
+    flex-direction: column;
+    width: calc(20%-20px); 
+
+}
+
+   .activities-board{
+     position: relative;
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+     border:2px solid whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(250, 249, 255, 0.9);
+
+   }
+
+   .activity-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+   
+   .signup-color{
+    color:green;
+    cursor: pointer;
+   }
+   .convert-color{
+    color:rgb(179, 39, 179);
+    cursor: pointer;
+
+   }
+  .discipling-color{
+    color:rgb(211, 48, 48);
+    cursor: pointer;
+
+  }
+  .deletion-color{
+    color:red;
+    cursor: pointer;
+    
+
+  }
+   .activity-button{
+    width: 60px;
+    height:35px ;  
+    text-align: left;
+    border: 1px solid rgb(235, 230, 230);
+    border-radius:4px;
+    padding: 8px;
+    margin: 0 2rem;
+    font-size: 0.5rem;
+    cursor: pointer;
+   }
+
+  .activity-card button.signup-color{
+    background-color: rgb(64, 148, 64); 
+    color:white 
+}
+
+  .activity-card button.convert-color{
+    background-color: #4ed64e;
+    color:white
+   }
+
+   .activity-highlight, .activity-time{
+    color: grey;
+   }
