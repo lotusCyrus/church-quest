@@ -1,14 +1,11 @@
-
 @media (min-width: 1301px) {
    
   .modal-content{
     margin-left: 25%;
-    margin-right: 15%;
-   }
+    margin-right: 15%;}
 
   .data-cards, .member-cards{
    justify-content: center;
-
   }
   
 
@@ -86,9 +83,9 @@
 .settings-nav-text{
   display: none
 }
+
 .settings-nav ul li{
   justify-content: center !important;
-
 }
 
 }
@@ -134,12 +131,10 @@
 
   .modal-content{
     margin-left: 18%;
-    min-width: 233px;
-     height: 58% !important;
+    min-width: 233px
   }
 
-  .modal-content div{
-    height: 80%;
+  .modal-content .modal-content-container{
     width: 100%;
     display: flex;
     flex-direction: column;

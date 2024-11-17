@@ -9,6 +9,8 @@ export default function Modal({onClose, children}) {
         <br/><br/>
         {children}
       </div>
+
+      
     </div>
   )
 }

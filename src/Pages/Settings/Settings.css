@@ -3,14 +3,12 @@
     height: 100%;
     position: relative;
     overflow: hidden;
-    top:40px
-
+    top:40px;
 }
 .settings-nav{
     width: 10%;
     height: 100%;
     margin: 0;
-    background-color: white;
     padding-top:20px;
     position: fixed;
 }

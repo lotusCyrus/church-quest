@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './topBar.css'
 import profileImage from './profileImage.png'
 import { Link } from 'react-router-dom'
-export default function TopBar({toggleSideNav, isOpen}) { 
-  
+
+export default function TopBar({toggleSideNav, isOpen}) {   
+
   return (
-    <div className={`top-bar ${isOpen?'open':'close'}`}>
+    <div className={`top-bar ${isOpen?'open':'close'}`} >
           
             <div className={`hamburger ${isOpen?'open':'close'}`} onClick={toggleSideNav}>
                <div className="bar"></div>

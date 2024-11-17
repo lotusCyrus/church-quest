@@ -7,21 +7,30 @@ import Settings from './Pages/Settings/Settings';
 import TopBar from './components/nav/topBar/topBar';
 import SideNav from './components/nav/sideNav/sideNav';
 import Modal from './components/modal/Modal';
+import Authmodal from './components/modal/Authmodal';
 import './Pages/Home/Home.css'
 import { useState } from 'react';
 import ModalForm from './components/modal/ModalForm';
+import { useTheme } from './hooks/useTheme';
 
 function App() {
 const [isOpen,setIsOpen]=useState()
 const [isModalOpen, setIsModalOpen]=useState(false)
 const [status,setStatus]=useState(null)
+const [isAuthModalOpen, setIsAuthModalOpen]=useState(true)
+
+
+const {mode}=useTheme()
 
 const [memberList, setMemberList ]=useState([
-  
+  {id:'1', name:'Kunle  Adewaleyy orishalwere', number:'091343493433', email:'Johnson@gmail.com' , address:'No 1 , adekunle street, Ibadan', status:'Convert' } ,
+  {id:'2', name:'Kunley  Adewaleuuu orishalwere', number:'091344343433', email:'Johnsons@gmail.com', address:'No 2 , adekunle street, Ibadan', status:'Discipling' },
+  {id:'3', name:'Kunler  Adewalel orishalwere', number:'091343043433', email:'Johnsonsolotu@gmail.com', address:'No 3, adekunle street, Ibadan', status:'Established' }
 ])
 
-
-
+const loginSuccess=()=>{
+  setIsAuthModalOpen(false)
+}
 
 const addMember=(member)=>{
   setMemberList((prevMember)=>{
@@ -43,16 +52,17 @@ const modalToggle=(value)=>{
    setIsOpen(!isOpen)
    console.log(isOpen)
  }
-
    return ( 
-      <div className='App'>
+      <div className={`App ${mode ==='dark'?'dark':'light'}`}>
+        
+        {isAuthModalOpen && <Authmodal  loginSuccess={loginSuccess}  />}
           {isModalOpen && (
                 <Modal  onClose={onClose}>
                            <ModalForm addMember={addMember} status={status}/>
               </Modal>
    )}     
       
-           <SideNav modalToggle={modalToggle} isOpen={isOpen}/>     
+           <SideNav setIsAuthModalOpen={setIsAuthModalOpen} modalToggle={modalToggle} isOpen={isOpen}/>     
       
            <div className={`right-section ${isOpen ? 'open' : 'close'}`}>
            <TopBar isOpen={isOpen} toggleSideNav={toggleSideNav}/>

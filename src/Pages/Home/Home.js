@@ -16,7 +16,7 @@ export default function Home( { modalToggle, isOpen}){
        <div className="card-details">
         <h1 className="card-number">54</h1>
         <span>Convert</span><br/>
-        <button className="card-button theme" onClick={()=>modalToggle("convert")}> Add <i className="fa-solid fa-user-plus"></i></button>
+        <button className="card-button theme" onClick={()=>modalToggle("Convert")}> Add <i className="fa-solid fa-user-plus"></i></button>
      </div>
      <span className="card-icon"><img width="40" height="40" src="https://img.icons8.com/emoji/48/latin-cross-emoji.png" alt="latin-cross-emoji"/> </span>
 </div>
@@ -24,7 +24,7 @@ export default function Home( { modalToggle, isOpen}){
      <div className="card-details">
         <h1 className="card-number">70</h1>
         <span>Discipling</span><br/>
-        <button className="card-button theme" onClick={()=>modalToggle("discipling")}>Add <i className="fa-solid fa-user-plus"></i></button>
+        <button className="card-button theme" onClick={()=>modalToggle("Discipling")}>Add <i className="fa-solid fa-user-plus"></i></button>
      </div>
      <span className="card-icon"><img width="40" height="40"  src={DisciplingImage}  alt='Discipling-img' /></span>
 </div>
@@ -33,7 +33,7 @@ export default function Home( { modalToggle, isOpen}){
      <div className="card-details">
         <h1 className="card-number">100</h1>
         <span>Established</span><br/>
-        <button className="card-button theme" onClick={()=>modalToggle("established")}>Add <i className="fa-solid fa-user-plus"></i></button>
+        <button className="card-button theme" onClick={()=>modalToggle("Established")}>Add <i className="fa-solid fa-user-plus"></i></button>
      </div>
      <span className="card-icon"><img width="40" height="40" src="https://img.icons8.com/external-topaz-kerismaker/48/external-First-Medal-award-topaz-kerismaker.png" alt="external-First-Medal-award-topaz-kerismaker"/></span>
 </div>

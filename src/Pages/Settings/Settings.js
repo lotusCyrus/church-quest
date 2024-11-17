@@ -1,8 +1,18 @@
 import React from 'react'
 import './Settings.css'
 import profileImage from '../../components/nav/topBar/profileImage.png'
+import modeIcon from '../../../src/assets/lightDarkMode.svg'
+import { useTheme } from '../../hooks/useTheme'
 export default function Settings() {
-  return (
+   
+   const {mode, changeMode, changeBackgroundColor}=useTheme()
+   
+   const toggleMode = () => {
+      changeMode(mode === 'dark' ? 'light' : 'dark' )
+   }
+
+   console.log(mode)
+   return (
     
                
     <div className="settings-box">
@@ -13,7 +23,7 @@ export default function Settings() {
              <li> <i className="fa-solid fa-gears"></i>  <h3 className="settings-nav-text">Settings</h3> </li>
 
              <li> <i className="fa-solid fa-user"></i> <span className="settings-nav-text">Your Profile</span> </li>
-             <li> <i className="fa-solid fa-toggle-on"></i> <span className="settings-nav-text">Light/Dark Mode</span> </li>
+             <li> <i className="fa-solid fa-sun" style={{filter: mode === 'white' ? 'invert(20%)' : 'invert(50%)' }} onClick={toggleMode}   ></i> <span className="settings-nav-text" >Light/Dark Mode</span> </li>
              <li> <i className="fa-solid fa-star-half-stroke"></i> <span className="settings-nav-text">Product Feedback</span> </li>
     
           </ul>
